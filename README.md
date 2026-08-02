@@ -19,4 +19,17 @@
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/dharshinivasu17/DSA_Coding/tree/master/0001-two-sum) |
+| [0877-stone-game](https://github.com/dharshinivasu17/DSA_Coding/tree/master/0877-stone-game) |
+## Math
+|  |
+| ------- |
+| [0877-stone-game](https://github.com/dharshinivasu17/DSA_Coding/tree/master/0877-stone-game) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0877-stone-game](https://github.com/dharshinivasu17/DSA_Coding/tree/master/0877-stone-game) |
+## Game Theory
+|  |
+| ------- |
+| [0877-stone-game](https://github.com/dharshinivasu17/DSA_Coding/tree/master/0877-stone-game) |
 <!---LeetCode Topics End-->
