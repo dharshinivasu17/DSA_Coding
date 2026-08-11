@@ -1,0 +1,50 @@
+lass Solution {
+    public int stoneGameII(int[] piles) {
+        int n = piles.length;
+
+        int[][] dp = new int[n][n + 1];
+        int[] suffix = new int[n + 1];
+
+        for (int i = n - 1; i >= 0; i--) {
+            suffix[i] = suffix[i + 1] + piles[i];
+        }
+
+        return solve(piles, 0, 1, dp, suffix);
+    }
+
+    private int solve(int[] piles, int i, int M,
+                      int[][] dp, int[] suffix) {
+
+        if (i >= piles.length) {
+            return 0;
+        }
+    if (i + 2 * M >= piles.length) {
+            return suffix[i];
+        }
+
+        if (dp[i][M] != 0) {
+            return dp[i][M];
+        }
+
+        int maxStones = 0;
+
+        for (int X = 1; X <= 2 * M; X++) {
+
+            int opponent = solve(
+                piles,
+                i + X,
+                Math.max(M, X),
+                dp,
+                suffix
+            );
+
+            int currentPlayer = suffix[i] - opponent;
+
+            maxStones = Math.max(maxStones, currentPlayer);
+        }
+
+        dp[i][M] = maxStones;
+
+        return maxStones;
+    }
+}
